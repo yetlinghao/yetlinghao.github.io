@@ -240,42 +240,10 @@ main {
 
 .pub {
     padding: 1.5rem 0;
-    position: relative;
 }
 
 .pub + .pub {
     border-top: 1px solid var(--rule);
-}
-
-/* the hairlines above and below warm on hover — the only motion on the page */
-.pub::before,
-.pub::after {
-    content: "";
-    position: absolute;
-    height: 1px;
-    width: 0;
-    background: var(--accent);
-    transition: width 0.45s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.pub::before {
-    top: -1px;
-    left: 0;
-}
-
-.pub::after {
-    bottom: -1px;
-    right: 0;   /* bottom line grows from the right — the two meet around the item */
-}
-
-.pub:hover::before,
-.pub:hover::after {
-    width: 100%;
-}
-
-.pub:first-child::before,
-.pub:last-child::after {
-    display: none;   /* no hairline exists beyond the list's edges */
 }
 
 .pub-title {
@@ -284,6 +252,12 @@ main {
     font-weight: 500;
     line-height: 1.45;
     letter-spacing: 0.002em;
+    transition: color 0.3s ease;
+}
+
+/* the title warms on hover — same quiet register as the avatar and the name */
+.pub:hover .pub-title {
+    color: var(--accent);
 }
 
 .pub-desc {
