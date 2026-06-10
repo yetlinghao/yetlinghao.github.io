@@ -3,148 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Linghao Zhang personal website, Wuhan University, Software Engineering">
+    <meta name="description" content="Linghao Zhang — post-training at Xiaomi MiMo.">
     <meta name="keywords" content="Linghao Zhang, linghao, linghao zhang">
-    <link rel="canonical" href="https://szhang.me/">
-    
+    <link rel="canonical" href="https://linghaoz.com/">
+
     <link rel="icon" type="image/jpeg" href="icon.jpg">
     <link rel="apple-touch-icon" href="icon.jpg">
-    
+
     <title>Linghao Zhang</title>
-    
+
+    <script>
+        // Set theme before first paint to avoid flash
+        (function () {
+            var saved = localStorage.getItem('theme');
+            if (saved === 'dark' || (!saved && matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+    </script>
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libertinus+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
+    <div class="page">
         <header class="header">
-            <h1 class="name">Linghao Zhang</h1>
-            <div class="title">Technical Staff @ Xiaomi MiMo</div>
-            <nav class="contact-nav">
-                <a href="mailto:starrywhuzhang@gmail.com" class="contact-link">Email</a>
-                <span class="separator">·</span>
-                <a href="https://scholar.google.com/citations?user=q3ZVx88AAAAJ&hl=en" class="contact-link">Scholar</a>
-                <span class="separator">·</span>
-                <a href="https://github.com/yetlinghao" class="contact-link">GitHub</a>
-                <span class="separator">·</span>
-                <a href="https://twitter.com/starryzhangcs" class="contact-link">X</a>
+            <div class="masthead">
+                <img src="icon.jpg" alt="Linghao Zhang" class="avatar">
+                <button class="theme-toggle" aria-label="Toggle color scheme" title="Toggle color scheme">
+                    <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
+                        <circle cx="7" cy="7" r="6" fill="none" stroke="currentColor" stroke-width="1.2"/>
+                        <path d="M7 1 A6 6 0 0 1 7 13 Z" fill="currentColor"/>
+                    </svg>
+                </button>
+            </div>
+
+            <h1 class="name">Linghao Zhang<span class="name-zh" aria-hidden="true">张凌浩</span></h1>
+            <p class="role">Technical Staff · <a href="https://mimo.xiaomi.com/" class="link">Xiaomi MiMo</a></p>
+
+            <nav class="nav" aria-label="Contact">
+                <a class="nav-link" href="mailto:starrywhuzhang@gmail.com">Email</a>
+                <a class="nav-link" href="https://scholar.google.com/citations?user=q3ZVx88AAAAJ&hl=en">Scholar</a>
+                <a class="nav-link" href="https://github.com/yetlinghao">GitHub</a>
+                <a class="nav-link" href="https://twitter.com/starryzhangcs">X</a>
             </nav>
         </header>
 
         <main>
-            <section class="section about">
-                <h2 class="section-title">About</h2>
-                <p class="intro">
-                    I'm doing post-training at <a href="https://mimo.xiaomi.com/" class="inline-link">Xiaomi MiMo</a>. Previously, I worked as a research intern at <a href="https://www.microsoft.com/en-us/research/group/data-knowledge-intelligence/" class="inline-link">Microsoft Research</a>, 
-                    advised by <a href="https://shilinhe.github.io/" class="inline-link">Shilin He</a> and 
-                    <a href="https://www.microsoft.com/en-us/research/people/kay/" class="inline-link">Yu Kang</a>.
+            <section class="section intro">
+                <p>
+                    I work on post-training at <a href="https://mimo.xiaomi.com/" class="link">Xiaomi MiMo</a>.
+                    Before that, I was a research intern at <a href="https://www.microsoft.com/en-us/research/group/data-knowledge-intelligence/" class="link">Microsoft Research</a>.
                 </p>
-                <p class="tagline">I build something verifiable and scalable for code. I also work on coding agents & RL.</p>
+                <p>
+                    I build something verifiable and scalable for code. I also work on coding agents & RL.
+                </p>
+                <p class="aside">
+                    Feel free to <a href="https://calendar.app.google/JwmqJa1BL1rU2qAY6" class="link">schedule a chat</a>.
+                </p>
             </section>
 
-
-            <section class="section news-minimal">
-                <h2 class="section-title">News</h2>
-                <div class="news-list-minimal">
-                    <article class="news-item-minimal">
-                        <time class="news-date">Mar 2026</time>
-                        <span class="news-content-minimal">
-                            <a href="https://mimo.xiaomi.com/mimo-v2-pro" class="inline-link">MiMo-V2-Pro</a>, the agentic brain.
-                        </span>
-                    </article>
-
-                    <article class="news-item-minimal">
-                        <time class="news-date">Dec 2025</time>
-                        <span class="news-content-minimal">
-                            <a href="https://mimo.xiaomi.com/mimo-v2-flash" class="inline-link">MiMo-V2-Flash</a>, a foundation language model.
-                        </span>
-                    </article>
-
-                    <article class="news-item-minimal">
-                        <time class="news-date">Sep 2025</time>
-                        <span class="news-content-minimal">
-                            1 Paper accepted to NeurIPS 2025.
-                        </span>
-                    </article>
-
-                    <article class="news-item-minimal">
-                        <time class="news-date">May 2025</time>
-                        <span class="news-content-minimal">
-                            <a href="https://swe-bench-live.github.io/" class="inline-link">SWE-bench-Live</a> - Tracking real coding capabilities in LLM and agents. 
-                        </span>
-                    </article>
-                    
-                    <article class="news-item-minimal">
-                        <time class="news-date">Jan 2025</time>
-                        <span class="news-content-minimal">
-                            <a href="https://arxiv.org/abs/2501.13699" class="inline-link">DI-Bench</a> accepted to ACL Findings 2025.
-                        </span>
-                    </article>
-                    
-                    <article class="news-item-minimal">
-                        <time class="news-date">Aug 2024</time>
-                        <span class="news-content-minimal">
-                            Internship at <a href="https://www.microsoft.com/en-us/research/group/data-knowledge-intelligence/" class="inline-link">Microsoft Research</a>.
-                        </span>
-                    </article>
-                </div>
+            <section class="section">
+                <h2 class="section-label">News</h2>
+                <ul class="news">
+                    <li class="news-item">
+                        <time class="news-date">2026·03</time>
+                        <span class="news-text"><a href="https://mimo.xiaomi.com/mimo-v2-pro" class="link">MiMo-V2-Pro</a>, the agentic brain.</span>
+                    </li>
+                    <li class="news-item">
+                        <time class="news-date">2025·12</time>
+                        <span class="news-text"><a href="https://mimo.xiaomi.com/mimo-v2-flash" class="link">MiMo-V2-Flash</a>, a foundation language model.</span>
+                    </li>
+                    <li class="news-item">
+                        <time class="news-date">2025·09</time>
+                        <span class="news-text">SWE-bench-Live accepted to NeurIPS 2025.</span>
+                    </li>
+                    <li class="news-item">
+                        <time class="news-date">2025·05</time>
+                        <span class="news-text"><a href="https://swe-bench-live.github.io/" class="link">SWE-bench-Live</a> — tracking real coding capabilities of LLMs and agents.</span>
+                    </li>
+                    <li class="news-item">
+                        <time class="news-date">2025·01</time>
+                        <span class="news-text"><a href="https://arxiv.org/abs/2501.13699" class="link">DI-Bench</a> accepted to ACL Findings 2025.</span>
+                    </li>
+                    <li class="news-item">
+                        <time class="news-date">2024·08</time>
+                        <span class="news-text">Joined <a href="https://www.microsoft.com/en-us/research/group/data-knowledge-intelligence/" class="link">Microsoft Research</a> as an intern.</span>
+                    </li>
+                </ul>
             </section>
 
-            <section class="section research">
-                <h2 class="section-title">Research</h2>
-                <div class="research-grid">
-                    <article class="research-item">
-                        <h3 class="research-title">MiMo-V2-Flash</h3>
-                        <p class="research-description">A powerful, efficient, and ultra-fast foundation language model.</p>
-                        <div class="research-authors">
-                            <strong>LLM-Core Xiaomi</strong>
-                        </div>
-                        <div class="research-links">
-                            <a href="https://github.com/XiaomiMiMo/MiMo-V2-Flash/blob/main/paper.pdf" class="research-link">Report</a>
-                            <a href="https://mimo.xiaomi.com/blog/index" class="research-link">Blog</a>
-                            <a href="https://huggingface.co/XiaomiMiMo/MiMo-V2-Flash" class="research-link">HuggingFace</a>
-                        </div>
+            <section class="section">
+                <h2 class="section-label">Research</h2>
+                <div class="pubs">
+                    <article class="pub">
+                        <h3 class="pub-title">MiMo-V2-Flash</h3>
+                        <p class="pub-desc">A powerful, efficient, and ultra-fast foundation language model.</p>
+                        <p class="pub-authors">LLM-Core Xiaomi</p>
+                        <p class="pub-meta">
+                            <a class="pub-link" href="https://github.com/XiaomiMiMo/MiMo-V2-Flash/blob/main/paper.pdf">Report</a>
+                            <a class="pub-link" href="https://mimo.xiaomi.com/blog/index">Blog</a>
+                            <a class="pub-link" href="https://huggingface.co/XiaomiMiMo/MiMo-V2-Flash">HuggingFace</a>
+                        </p>
                     </article>
 
-                    <article class="research-item">
-                        <h3 class="research-title">SWE-bench Goes Live!</h3>
-                        <p class="research-description">Scaling data for SWE tasks by automate the setup of execution environments.</p>
-                        <div class="research-authors">
-                            <strong>Linghao Zhang</strong>, Shilin He, Chaoyun Zhang, Yu Kang, Bowen Li, Chengxing Xie, Junhao Wang, Maoquan Wang, Yufan Huang, Shengyu Fu, Elsie Nallipogu, Qingwei Lin, Yingnong Dang, Saravan Rajmohan, Dongmei Zhang
-                        </div>
-                        <div class="research-venue">NeurIPS 2025</div>
-                        <div class="research-links">
-                            <a href="https://arxiv.org/pdf/2505.23419" class="research-link">Paper</a>
-                            <a href="https://github.com/Microsoft/SWE-bench-Live" class="research-link">Code</a>
-                            <a href="https://swe-bench-live.github.io/" class="research-link">Project</a>
-                        </div>
+                    <article class="pub">
+                        <h3 class="pub-title">SWE-bench Goes Live!</h3>
+                        <p class="pub-desc">Scaling data for software engineering tasks by automating the setup of execution environments.</p>
+                        <p class="pub-authors"><em>Linghao Zhang</em>, Shilin He, Chaoyun Zhang, Yu Kang, Bowen Li, Chengxing Xie, Junhao Wang, Maoquan Wang, Yufan Huang, Shengyu Fu, Elsie Nallipogu, Qingwei Lin, Yingnong Dang, Saravan Rajmohan, Dongmei Zhang</p>
+                        <p class="pub-meta">
+                            <span class="pub-venue">NeurIPS 2025</span>
+                            <a class="pub-link" href="https://arxiv.org/pdf/2505.23419">Paper</a>
+                            <a class="pub-link" href="https://github.com/Microsoft/SWE-bench-Live">Code</a>
+                            <a class="pub-link" href="https://swe-bench-live.github.io/">Project</a>
+                        </p>
                     </article>
 
-                    <article class="research-item">
-                        <h3 class="research-title">DI-Bench: Benchmarking Large Language Models on Dependency Inference with Testable Repositories</h3>
-                        <p class="research-description">A CI-based benchmark curation pipeline for software engineering tasks at the repository level.</p>
-                        <div class="research-authors">
-                            <strong>Linghao Zhang</strong>, Junhao Wang, Shilin He, Chaoyun Zhang, Yu Kang, Bowen Li, Jiaheng Wen, Chengxing Xie, Maoquan Wang, Yufan Huang, Elsie Nallipogu, Qingwei Lin, Yingnong Dang, Saravan Rajmohan, Dongmei Zhang, Qi Zhang
-                        </div>
-                        <div class="research-venue">ACL Findings 2025</div>
-                        <div class="research-links">
-                            <a href="https://arxiv.org/pdf/2501.13699" class="research-link">Paper</a>
-                            <a href="https://github.com/Microsoft/DI-Bench" class="research-link">Code</a>
-                        </div>
+                    <article class="pub">
+                        <h3 class="pub-title">DI-Bench: Benchmarking Large Language Models on Dependency Inference with Testable Repositories</h3>
+                        <p class="pub-desc">A CI-based benchmark curation pipeline for repository-level software engineering tasks.</p>
+                        <p class="pub-authors"><em>Linghao Zhang</em>, Junhao Wang, Shilin He, Chaoyun Zhang, Yu Kang, Bowen Li, Jiaheng Wen, Chengxing Xie, Maoquan Wang, Yufan Huang, Elsie Nallipogu, Qingwei Lin, Yingnong Dang, Saravan Rajmohan, Dongmei Zhang, Qi Zhang</p>
+                        <p class="pub-meta">
+                            <span class="pub-venue">ACL Findings 2025</span>
+                            <a class="pub-link" href="https://arxiv.org/pdf/2501.13699">Paper</a>
+                            <a class="pub-link" href="https://github.com/Microsoft/DI-Bench">Code</a>
+                        </p>
                     </article>
                 </div>
             </section>
         </main>
 
-        <script type='text/javascript' id='mapmyvisitors' src='https://mapmyvisitors.com/map.js?cl=fcefdb&w=300&t=n&d=CmntBe0pkE2fR2Cp2rdMYTg19Y2C-WSgWFeIcOE90LA&co=ffffff&cmo=ffa8a8&cmn=ff5353&ct=808080'></script>
-
         <footer class="footer">
-            <p>&copy; 2025 Linghao Zhang. Built with care.</p>
+            <div class="footer-row">
+                <div class="footer-left">
+                    <span>© 2026 Linghao Zhang</span>
+                    <div class="footer-guid">d012ca5c-6cff-4726-9880-269a29179b2a</div>
+                </div>
+                <div class="footer-right">
+                    <span class="footer-time" id="footer-time"></span>
+                    <div class="footer-map" aria-hidden="true">
+                        <script type="text/javascript" id="mapmyvisitors" src="https://mapmyvisitors.com/map.js?cl=fcefdb&w=300&t=n&d=CmntBe0pkE2fR2Cp2rdMYTg19Y2C-WSgWFeIcOE90LA&co=ffffff&cmo=ffa8a8&cmn=ff5353&ct=808080"></script>
+                    </div>
+                </div>
+            </div>
         </footer>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        document.querySelector('.theme-toggle').addEventListener('click', function () {
+            var dark = document.documentElement.classList.toggle('dark');
+            localStorage.setItem('theme', dark ? 'dark' : 'light');
+        });
+
+        // Live clock — where I am
+        (function () {
+            var el = document.getElementById('footer-time');
+            var fmt = new Intl.DateTimeFormat('en-GB', {
+                hour: '2-digit', minute: '2-digit', timeZone: 'Asia/Shanghai'
+            });
+            function tick() { el.textContent = fmt.format(new Date()) + ' in Beijing'; }
+            tick();
+            setInterval(tick, 30 * 1000);
+        })();
+    </script>
 </body>
 </html>
