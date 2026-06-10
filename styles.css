@@ -361,27 +361,9 @@ main {
     user-select: all;
 }
 
-/* visitor map: tracking stays active, the widget stays nearly invisible.
-   It fades in only when hovered — a map for the curious. */
+/* visitor map: tracking stays active, the widget itself is hidden */
 .footer-map {
-    margin-top: 0.5rem;
-    width: 130px;
-    margin-left: auto;
-    opacity: 0.06;
-    filter: grayscale(100%);
-    transition: opacity 0.5s ease, filter 0.5s ease;
-}
-
-.footer-map:hover {
-    opacity: 0.85;
-    filter: grayscale(40%);
-}
-
-.footer-map img,
-.footer-map a {
-    max-width: 100%;
-    height: auto;
-    display: block;
+    display: none;
 }
 
 .footer-time {
@@ -409,6 +391,10 @@ main {
         flex-direction: column;
         gap: 0.1rem;
         padding: 0.6rem 0;
+    }
+
+    .news-date {
+        flex: none;   /* desktop's 4.5rem basis would become height in column layout */
     }
 }
 
